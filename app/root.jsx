@@ -7,27 +7,22 @@ import {
   Scripts,
   ScrollRestoration,
 } from "remix";
-import type { LinksFunction, MetaFunction, LoaderFunction } from "remix";
 
 import tailwindStylesheetUrl from "./styles/tailwind.css";
 import { getUser } from "./session.server";
 
-export const links: LinksFunction = () => {
+export const links = () => {
   return [{ rel: "stylesheet", href: tailwindStylesheetUrl }];
 };
 
-export const meta: MetaFunction = () => ({
+export const meta = () => ({
   charset: "utf-8",
   title: "Remix Notes",
   viewport: "width=device-width,initial-scale=1",
 });
 
-type LoaderData = {
-  user: Awaited<ReturnType<typeof getUser>>;
-};
-
-export const loader: LoaderFunction = async ({ request }) => {
-  return json<LoaderData>({
+export const loader = async ({ request }) => {
+  return json({
     user: await getUser(request),
   });
 };
