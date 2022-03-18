@@ -68,5 +68,6 @@
   "bugs": {
     "url": "https://github.com/yaaamin/jazz-stack-no-ts/issues"
   },
-  "homepage": "https://github.com/yaaamin/jazz-stac-no-tsk#readme"
+  "homepage": "https://github.com/yaaamin/jazz-stack-no-ts#readme",
+  "main": "prettier.config.js"
 }
