@@ -3,7 +3,7 @@
 Learn more about [Remix Stacks](https://remix.run/stacks).
 
 ```
-npx create-remix --template yaaamin/jazz-stack
+npx create-remix --template yaaamin/jazz-stack-no-ts
 ```
 
 ## What's in the stack
